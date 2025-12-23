@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Happy 2nd Anniversary ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Itim&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .envelope {
+        position: relative;
+        width: 320px;
+        height: 220px;
+        background: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        overflow: hidden;
+        transition: transform 0.5s;
+    }
+
+    .envelope:hover {
+        transform: scale(1.03);
+    }
+
+    .flap {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #ff6f91;
+        clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 0, 0 0);
+        transition: 0.8s;
+        transform-origin: top;
+    }
+
+    .letter {
+        position: absolute;
+        bottom: -100%;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        padding: 25px;
+        text-align: center;
+        transition: 1s;
+        overflow-y: auto;
+    }
+
+    .letter h1 {
+        color: #ff4d6d;
+        margin-bottom: 10px;
+    }
+
+    .letter p {
+        color: #555;
+        line-height: 1.8;
+        font-size: 15px;
+    }
+
+    .open .flap {
+        transform: rotateX(180deg);
+    }
+
+    .open .letter {
+        bottom: 0;
+    }
+
+    .hint {
+        position: absolute;
+        bottom: -40px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+        opacity: 0.9;
+    }
+
+    .front-text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff4d6d;
+    text-shadow: 0 2px 8px rgba(255,77,109,0.4);
+    letter-spacing: 2px;
+    pointer-events: none;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    50% { transform: translate(-50%, -50%) scale(1.08); }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* ซ่อนข้อความเมื่อเปิดจดหมาย */
+.open .front-text {
+    opacity: 0;
+    transition: 0.5s;
+}
+</style>
+</head>
+
+<body>
+
+<div class="envelope" onclick="openLetter()">
+    <div class="flap"></div>
+    <div class="front-text">ถึงเด็กอ้วนของเค้า 💕</div>
+
+    <div class="letter">
+        <h1>Happy 2nd Anniversary ❤️</h1>
+        <p>
+            ให้เด็กหมูอู้ดอ่านน🙈🙈<br><br>
+            
+            นี่ก็อยู่ด้วยกันมา 2 ปีแย้ว 
+            อ้วนดีกับเค้าทู้กกสิ่งทู้กกอย่างเยย<br><br>
+
+            เค้าดีใจมากๆเยยที่ด้ายเจออ้วนในวันนั้น  
+            จนถึงวันนี้เค้ายังชอบอ้วนเหมือนเดิมตลอดไม่เปลี่ยนไปเลยย💗💗💗
+            อยู่ด้วยกานไปตลอดแบบนี้เรื่อยๆนะคะ
+            เค้ารักอ้วนที่สูดดดเลยย
+            จุ้บบบบบบบมั้วววะะะะะะ<br><br>
+        </p>
+    </div>
+
+    <div class="hint">คลิกเพื่อเปิดจดหมาย 💌</div>
+</div>
+
+<script>
+function openLetter() {
+    document.querySelector('.envelope').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
