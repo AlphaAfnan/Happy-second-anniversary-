@@ -2,6 +2,10 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
+
+<!-- สำคัญมากสำหรับมือถือ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Happy 2nd Anniversary ❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Itim&display=swap" rel="stylesheet">
@@ -13,7 +17,7 @@
 
 body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
     display: flex;
     justify-content: center;
@@ -24,12 +28,15 @@ body {
 /* ข้อความด้านบน */
 .top-text {
     position: absolute;
-    top: 35px;
+    top: 20px;
+    text-align: center;
+    width: 100%;
     font-family: 'Itim', cursive;
-    font-size: 22px;
+    font-size: 20px;
     color: #fff;
     opacity: 0.95;
     text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    padding: 0 10px;
 }
 
 /* หัวใจลอย */
@@ -39,14 +46,14 @@ body {
     position: fixed;
     top: -10%;
     left: 50%;
-    font-size: 24px;
+    font-size: 22px;
     opacity: 0.25;
-    animation: float 10s linear infinite;
+    animation: float 12s linear infinite;
 }
 
 .hearts::after {
-    left: 20%;
-    animation-duration: 10s;
+    left: 15%;
+    animation-duration: 16s;
 }
 
 @keyframes float {
@@ -58,6 +65,7 @@ body {
 .envelope {
     position: relative;
     width: 340px;
+    max-width: 90vw;   /* สำคัญ: ไม่ให้ล้นจอ */
     height: 230px;
     background: linear-gradient(180deg, #fff, #fff5f8);
     border-radius: 14px;
@@ -92,13 +100,15 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Itim', cursive;
-    font-size: 26px;
+    font-size: 24px;
     color: #ff4d6d;
     letter-spacing: 1.5px;
     text-shadow: 0 2px 10px rgba(255,77,109,0.4);
     pointer-events: none;
     animation: heartbeat 1.6s infinite;
     z-index: 2;
+    text-align: center;
+    width: 100%;
 }
 
 @keyframes heartbeat {
@@ -114,7 +124,7 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg, #fffafc, #ffeef4);
-    padding: 28px 26px;
+    padding: 22px 20px;
     text-align: center;
     transition: 1.1s ease;
     overflow-y: auto;
@@ -127,16 +137,15 @@ body {
 .letter h1 {
     font-family: 'Playfair Display', serif;
     color: #ff4d6d;
-    font-size: 22px;
-    margin-bottom: 14px;
-    letter-spacing: 1px;
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
 .letter p {
     font-family: 'Itim', cursive;
     color: #5a5a5a;
-    line-height: 2;
-    font-size: 16px;
+    line-height: 1.9;
+    font-size: 15px;
 }
 
 /* เปิดจดหมาย */
@@ -156,13 +165,24 @@ body {
 /* คำใบ้ */
 .hint {
     position: absolute;
-    bottom: -42px;
+    bottom: -38px;
     width: 100%;
     text-align: center;
     color: #fff;
     font-family: 'Itim', cursive;
-    font-size: 14px;
+    font-size: 13px;
     opacity: 0.9;
+}
+
+/* 🔹 ปรับเพิ่มสำหรับจอเล็กมาก */
+@media (max-width: 360px) {
+    .letter p {
+        font-size: 14px;
+    }
+
+    .front-text {
+        font-size: 22px;
+    }
 }
 </style>
 </head>
@@ -187,18 +207,17 @@ body {
 <script>
 const text = `ให้เด็กหมูอู๊ดอ่านน 🙈🙈
 
-นี่ก็อยู่ด้วยกันมา 2 ปีแย้ว 
-อ้วนดีกับเค้าทู้กกสิ่งทู้กกอย่างเยย
+นี่ก็อยู่ด้วยกันมา 2 ปีแย้ว 
+อ้วนดีกับเค้าทุกสิ่งทุกอย่างเยย
 
-เค้าดีใจมากๆเยยที่ด้ายเจออ้วนในวันนั้น
-จนถึงวันนี้เค้ายังชอบอ้วนเหมือนเดิมตลอดไม่เปลี่ยนไปเลยย💗💗💗
-อยู่ด้วยกานไปตลอดแบบนี้เรื่อยๆนะคะ
+เค้าดีใจมากๆเยยที่ได้เจออ้วนในวันนั้น
+จนถึงวันนี้เค้ายังชอบอ้วนเหมือนเดิมตลอดไม่เปลี่ยนไปเลยย 💗💗💗
 
-ถึงจาทะเลาะกันบ๊อยบ่อยย
-แต่เค้าม้ายเคยคิดจะหายไปจากอ้วนเลย
-เค้าคิดที่จะปรับเพื่อให้ได้อยู่กับอ้วน
+ถึงจะทะเลาะกันบ่อยบ่อย
+แต่เค้าไม่เคยคิดจะหายไปจากอ้วนเลย
+เค้าคิดที่จะปรับเพื่อให้ได้อยู่กับอ้วน
 
-เค้ารักอ้วนที่สูดดดเลยย
+เค้ารักอ้วนที่สุดเลยย
 จุ้บบบบบบบมั้วววะะะะะะ 💕`;
 
 let i = 0;
@@ -209,14 +228,14 @@ function typeWriter() {
         document.getElementById("message").innerHTML +=
             text.charAt(i) === "\n" ? "<br>" : text.charAt(i);
         i++;
-        setTimeout(typeWriter, 45);
+        setTimeout(typeWriter, 40);
     }
 }
 
 function openLetter() {
     document.querySelector('.envelope').classList.toggle('open');
     if (!typed) {
-        setTimeout(typeWriter, 700);
+        setTimeout(typeWriter, 600);
         typed = true;
     }
 }
